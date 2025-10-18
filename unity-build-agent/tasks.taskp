@@ -1,0 +1,49 @@
+[TASKS]
+-- v2 (important bugs and features)
+- confirm config "injection" is not possible [#A589D]
+    -- the configs from config.ini and the python args must be sanitized
+    -- I put a simple idea in, but have not verified it
+- add build cancelation support [#7CBB9]
+    -- holding a process handle had unity fighting me
+    -- this task got pushed from v1
+- add support for compressed builds [#5D08C]
+- better archive formatting [#53339]
+    - seperate archive name from config section name [#14CD9]
+
+-- v3 (windows and old unity support)
+- add propper support for windows [#94F9A]
+- add support for older than Unity 6 [#488E2]
+    -- right now it uses build pipelines, but does not have to
+
+-- v4 (github integration)
+- add support for cloing repos if they do not exist [#772BE]
+- add support for github fetch/pull [#C7F79]
+    -- this will require a token
+
+-- v5 (auto unity install)
+- auto install unity hub if not found (configurable) [#91F5F]
+- auto find unity editor based on project version (configurable) [#CE429]
+    - auto install if editor is not found (configurable) [#21C47]
+- research to find out how to active license automatically on free version [#39660]
+    -- low priority
+
+-- v6 (web interface)
+- design [#1C1B9]
+
+[ISSUES]
+- # TODO: ./Unity is a linux only cmd, fix this for other platforms [build.py::100]
+- # TODO: currently this process is uncancelable from python. [build.py::123]
+- # TODO: this is a problem because it doesnt fully close all unity processes. [build.py::146]
+- # TODO: figure out if I want to use tar or not. tar is uncompressed, but built into python. [build.py::197]
+
+[USERS]
+- royalpizza
+
+[SETTINGS]
+Scanner.Keyword: TODO
+Scanner.Keyword: FIXME
+Scanner.Keyword: BUG
+Scanner.Exclude: *.md
+Scanner.Exclude: *.taskp
+Scanner.Exclude: __pycache__
+Scanner.Exclude: old
