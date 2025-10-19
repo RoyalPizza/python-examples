@@ -1,0 +1,25 @@
+[TASKS]
+-- v2 (polish)
+- add license file [#241BA]
+- add padding between project and build target field [#B5CE8]
+- provide a seperate arg for the link [#2568A]
+    -- the main idea is to not have so much space for just link
+    -- want to think of alternative ideas on this too
+- input sanitize [#46D31]
+    -- right now we pass args straight as fields
+    -- need to sanitize all user input
+
+
+[ISSUES]
+- # TODO: probably not needed because we do a check for None after this load (because args need the check too) [discord.py::48]
+
+[USERS]
+- royalpizza
+
+[SETTINGS]
+Scanner.Keyword: TODO
+Scanner.Keyword: FIXME
+Scanner.Keyword: BUG
+Scanner.Exclude: *.md
+Scanner.Exclude: *.taskp
+Scanner.Exclude: __pycache__
